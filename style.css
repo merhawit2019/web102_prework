@@ -21,6 +21,7 @@ body {
 
 .stats-container {
     display: flex;
+    background-color: blue;
 }
 
 .stats-card {
