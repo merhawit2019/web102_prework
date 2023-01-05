@@ -33,7 +33,7 @@ function addGamesToPage(games) {
 
     // loop over each item in the data
     for(let i=0; i < games.length; i++ ) {
-
+        
         // create a new div element, which will become the game card
         let div = document.createElement('div');     
 
@@ -47,8 +47,8 @@ function addGamesToPage(games) {
         const desc = `
         <img class=game-img  src= ${games[i].img}>
         <h1>${games[i].name}</h1>
-        <h2>${games[i].description}</h2>
-        <h4>${games[i].goal}</h4>
+        <h3>${games[i].description}</h3>
+        <h4>Backers:${games[i].backers}</h4>
         `
         div.innerHTML=desc;
 
