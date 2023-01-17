@@ -181,11 +181,6 @@ descriptionContainer.appendChild(par)
  * Skills used: spread operator, destructuring, template literals, sort 
  */
 
-function getFee(isMember) {
-  return (isMember ? '$2.00' : '$10.00');
-}
-let x = getFee(true)
-console.log(x)
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
@@ -194,7 +189,27 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+ console.log(sortedGames)
+let [firstGame, secondGame, ... rest ] = sortedGames;
+
+const { name, ... others } = firstGame;
+let firstGameName = name;
+function secondname(){
+    let  { name, ... others } = secondGame;
+    return name;
+}
+
+let secondGameName = secondname()
+console.log(secondGameName)
+
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+let h4 = document.createElement('h4');   
+h4.innerHTML =firstGameName;
+firstGameContainer.appendChild(h4)
 
 // do the same for the runner up item
+
+let h4_1 = document.createElement('h4');   
+h4_1.innerHTML =secondGameName;
+secondGameContainer.appendChild(h4_1)
