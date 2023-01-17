@@ -72,13 +72,13 @@ addGamesToPage(GAMES_JSON)
 const contributionsCard = document.getElementById("num-contributions");
 
 // use reduce() to count the number of total contributions by summing the backers
-let totalNumberOfIndividuals = GAMES_JSON.reduce((acc, game) => {
+let totalNumberOfContributions = GAMES_JSON.reduce((acc, game) => {
 return acc + game.backers;
 }, 0);
 
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
-contributionsCard.innerHTML = totalNumberOfIndividuals.toLocaleString();
+contributionsCard.innerHTML = totalNumberOfContributions.toLocaleString();
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
@@ -158,17 +158,34 @@ const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
 
+let unfundedGamesList = GAMES_JSON.filter((game) => {
+    return game.pledged < game.goal;
+});
 
+let unfundedGamesCount = unfundedGamesList.length;
 // create a string that explains the number of unfunded games using the ternary operator
 
+let checkingStrForArrayLength = GAMES_JSON.length > 1 ? "games" : "game";
+let checkingunfundedGamesList = unfundedGamesList.length > 1 ? "games" : "game";
+
+let displayStr = `A total of $${totalAmaountRaised.toLocaleString()} has been raised for ${GAMES_JSON.length} ${checkingStrForArrayLength}. 
+${unfundedGamesList ? `Currently, ${unfundedGamesList.length.toLocaleString()} ${checkingunfundedGamesList} remains unfunded. we need your help to fund these amazing games!` : ""} `
 
 // create a new DOM element containing the template string and append it to the description container
+let par = document.createElement('p'); 
+par.innerHTML = displayStr;
+descriptionContainer.appendChild(par)
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
  * Skills used: spread operator, destructuring, template literals, sort 
  */
 
+function getFee(isMember) {
+  return (isMember ? '$2.00' : '$10.00');
+}
+let x = getFee(true)
+console.log(x)
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
