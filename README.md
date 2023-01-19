@@ -26,9 +26,9 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://github.com/merhawit2019/web102_prework/segen.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-![](https://github.com/merhawit2019/web102_prework/segen.gif)
+<img src='https://github.com/merhawit2019/web102_prework/segen.gif' title='Video Walkthrough' width='100' alt='Video Walkthrough' />
+
 
 GIF created with LiceCap.
 
