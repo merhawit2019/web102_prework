@@ -27,7 +27,7 @@ The following **optional** features are implemented:
 Here's a walkthrough of implemented features:
 
 
-<img src='https://github.com/merhawit2019/web102_prework/segen.gif' title='Video Walkthrough' width='220' height="240" alt='Video Walkthrough' />
+<img src='./segen.gif' title='Video Walkthrough' width='250' height="240" alt='Video Walkthrough' />
 
 
 GIF created with LiceCap.
