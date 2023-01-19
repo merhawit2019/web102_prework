@@ -28,12 +28,15 @@ Here's a walkthrough of implemented features:
 
 <img src='https://github.com/merhawit2019/web102_prework/segen.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+![](https://github.com/merhawit2019/web102_prework/segen.gif)
+
 GIF created with LiceCap.
 
 ## Notes
 
 Describe any challenges encountered while building the app.
 
+I didn't face any difficulties.
 
 ## License
 
