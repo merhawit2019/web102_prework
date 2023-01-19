@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [x] List anything else that you can get done to improve the app functionality!
-    * Navigation (nav) bar for Games.
+    * Integrated navigation (nav) bar for Games.
     * Integrated animation on the buttons and stats-card.
     * Integrated hover and transition effect on the buttons.
 
